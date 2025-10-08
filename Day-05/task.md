@@ -13,3 +13,10 @@ No need to reboot the server, as a scheduled maintenance reboot is already plann
 Disregard the current status of SELinux via the command line; the final status after the reboot should be disabled.
 
 
+Answer:
+
+sudo yum install -y policycoreutils policycoreutils-python-utils selinux-policy selinux-policy-targeted libselinux-utils
+
+sudo vi /etc/selinux/
+
+sestatus # to check the status of selinux
